@@ -15,7 +15,7 @@ if(!isset($_SESSION['username'])){
     </head>
     <body>
         
-          <div class = "container">
+          <div class = "container" style="background-image: url(Red-Background-Traingles.jpg)">
                 <nav>
                    <ul>
                         <li class="veru">
@@ -36,7 +36,7 @@ if(!isset($_SESSION['username'])){
                         <li><a href="#" class = "navlink">Questions</a></li>
                     
                         <li><a href="#">Hi, <?php echo $_SESSION['username']; ?>!</a>
-                        <div class ="listlogout">
+                        <div class ="listlogout" style="background-image: url(Red-Background-Traingles.jpg)">
                             <ul>
                                <li><a href="#">Home</a></li>
                                <li><a href="#">Your profile</a></li>
