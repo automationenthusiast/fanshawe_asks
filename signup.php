@@ -14,6 +14,8 @@ $pass = $_POST['password'];
 
 $passcheck = $_POST['passwordcheck'];
 
+
+
 $s = " SELECT * from signup_data_fasks WHERE email = '$email'";
 
 $result = mysqli_query($con,$s);
@@ -27,6 +29,7 @@ if($num == 1){
     mysqli_query($con,$reg);
     
     header('location:mainlogin.php');
+    
 }
 
 

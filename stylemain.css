@@ -144,90 +144,87 @@ body{
     margin: 0;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 100%;
-    display: inline-block;
+
+
+.container{
+    background-color:#e74c3c;
+    
     
 }
 
-header{
-    background-color: #e74c3c;
-    width: 100%;
+.container ul{
+    display: inline-flex;
+    text-align: center;
+    list-style: none;
+    margin-top: 3px;
+    
+   
 }
 
 
+.container ul li{
+    width: 210px;
+    margin: 5px;
+    padding: 10px;
+    
 
-header::after{
-    content: '';
-    display: table;
-    clear: both;
+}
+
+*
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.container ul li a{
+text-decoration: none;
+color: whitesmoke;
+font-weight: 350;
+font-size: 14;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container ul li a:hover{
+    
+    color: grey;
+    
+} 
+
+.listlogout{
+    display: none;
+}
+
+.container ul li:hover .listlogout{
+    display: block;
+    position: absolute;
+    background:#e74c3c; 
+    margin-top: 15px;
+    margin-left: -15px;
+    
+}
+
+.container ul li:hover .listlogout ul{
+    display: block;
+    margin: 12.5px;
+    
+}
+
+.mainbar{
+    position: absolute;
+}
+
+.search-txt{
+    border: 2px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0px 10px;
+    width: 210px;
+    font-size: 13;
+    
+
 }
 
 .homelogo{
-    float: left;
-}
-
-
-
-nav{
-    
-    float: right;
-    
-}
-
-nav ol{
-    margin:0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li{
-    
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 13px;
-   
-}
-
-.search-box{
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 16px;
-    border-radius: 40px;
-    padding: 10px;
-    width: fit-content;
-
-}
-.search-txt{
-   
-    border-radius: 30px;
-    padding: 8px;
-    width: 240px;
-    height: 35px;
-}
-
-.search-btn{
-    width: 40px;
-    height: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-
-nav a{
-    color: whitesmoke;
-    text-transform: capitalize;
-    text-shadow: #797575;
-    font-weight: 550;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   
-    
-}
-
-.fa {
-    background-color: transparent;
-    
+    top: 30%;
 }
