@@ -14,6 +14,10 @@ $pass = $_POST['password'];
 
 $passcheck = $_POST['passwordcheck'];
 
+$course = $_POST['course'];
+
+$oriname = $_POST['oriname'];
+
 
 
 $s = " SELECT * from signup_data_fasks WHERE email = '$email'";
@@ -25,7 +29,7 @@ $num = mysqli_num_rows($result);
 if($num == 1){
     header('location:mainlogin.php');
 }else{
-    $reg=" INSERT into signup_data_fasks( uname , email, password ) values ('$name','$email','$pass')";
+    $reg=" INSERT into signup_data_fasks( uname , email, password, course, oriname ) values ('$name','$email','$pass','$course','$oriname')";
     mysqli_query($con,$reg);
     
     header('location:mainlogin.php');

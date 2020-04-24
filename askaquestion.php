@@ -1,13 +1,4 @@
 
-<?php
- session_start();
- if(!isset($_SESSION['username'])){
-     header('location:mainlogin.php');
- 
- 
- 
- }
- ?>
  <html>
     <head>
       <link href="stylemain.css" rel="stylesheet" type="text/css">
@@ -21,7 +12,7 @@ function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  } else {  
     x.style.display = "none";
   }
 }
@@ -83,74 +74,36 @@ function myFunction() {
           </div>
 
           <div class ="home_questions" style="background-image: url(whitemosaic.jpg)">
-           
-         <?php
-        
 
-         $dbcon = mysqli_connect('localhost','root','feliciaislove@1','questions_answers');
-
-
-         $sqlget = "SELECT * FROM qa_records";
- 
-         $result = mysqli_query($dbcon, $sqlget);
-         $resultCheck = mysqli_num_rows($result);
-
-
-         if ($resultCheck > 0){
-             while($row = mysqli_fetch_assoc($result)){
-                
-
-                echo '<div class="leftmargin">';
+          <div class="leftmargin">
     
-                echo  '</div>';
-        
-                echo '<div class="middlespace" style=" background-color: white"><br>';
-       
-               
-       
-                echo '<h3 class ="nameofperson">&nbsp&nbsp&nbsp' ;
-       
-                echo $row['name'];
-       
-                echo '</h3><h3 class ="qualification">&nbsp - ';
-       
-                echo $row['course'];
-       
-                echo '&nbsp</h3><h3 class ="u_nameofperson">(@';
-       
-                echo $row['username'];
-       
-                echo ')</h3>';
-       
-                echo '<h3 class ="fullquestion">&nbsp&nbsp';
-       
-                echo $row['question'];
-       
-                echo '</h3>';
-       
-                echo '<h3 class="answer1">&nbsp&nbsp&nbsp<pre>';
-       
-                echo $row['answer'];
-       
-                echo '</pre></h3>';
-                
-       
-                echo '</div><div class="rightmargin"></div>';
+          </div>
 
-                
-       
-             }
-         }
-else{
-    echo "fail";
-}
+          <div class="middlespace" style=" background-color: white"><br>
+          
+  Go for it! Ask a question.
+  <br>
+  <br>
+<form action="ask.php" method="post">
+    <textarea name = "askquestion" rows="3" cols="100" required>
+    Ask here...
+</textarea>
+<br>
+<br> 
+<button class="askbutton">Ask!</button>
 
-            
+<br>
 
-         ?>       
-        
-    </body>
+<br>
+
+</form>
+
+   
+
+           </div>
+           
+           <div class="rightmargin"></div>
+
+
+          </body>
 <html>
-
-
-

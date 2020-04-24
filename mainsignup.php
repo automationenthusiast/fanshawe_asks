@@ -39,6 +39,7 @@ if(isset($msg)){
     <input class="input_text" type="password" placeholder="Password" name="password" required>
     <br>
     <br>
+    <input class="input_text" type="text" placeholder="Name" name="oriname" required>
     <br>
     <br>
    </div>
@@ -47,7 +48,12 @@ if(isset($msg)){
     <input class="input_text" type="password" placeholder="Re-enter Password" name="passwordcheck" required>
     <br>
     <br>
+    <input class="input_text" type="text" placeholder="Course" name="course" required>
+    <br>
+    <br>
     <button class="loginbttn">Signup</button>
+    <br>
+    <br>
    </div>
 
    </form>
